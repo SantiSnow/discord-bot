@@ -66,7 +66,9 @@ async def ayuda(ctx):
                                       "/info para ver información sobre mi, el bot anfitrión y sobre el server \n"
                                       "/stats para ver información sobre mi, el bot anfitrión y sobre el server \n"
                                       "/youtube seguido de lo que quieras para buscarlo en youtube \n"
-                                      "/reglas para ver las reglas del server \n",
+                                      "/reglas para ver las reglas del server \n"
+                                      "/ping para jugar al ping pong conmigo \n"
+                                      "/chottomate para ver chotto mate",
                           color=discord.Color.green())
     await ctx.send(embed=embed)
 
@@ -79,6 +81,14 @@ async def youtube(ctx, *, search):
     await ctx.send('https://www.youtube.com/watch?v=' + search_results[0])
 
 
+@bot.command()
+async def chottomate(ctx):
+    embed = discord.Embed(title=f"{ctx.guild.name}",
+                          description="Chotto Mate")
+    embed.set_thumbnail(url='https://memegenerator.net/img/instances/84812431/chotto-matte.jpg')
+    await ctx.send(embed=embed)
+
+
 # eventos
 
 
@@ -87,3 +97,6 @@ async def on_ready():
     print("¡Hola, soy un bot y estoy listo para ayudar!")
     await bot.change_presence(activity=discord.Streaming(name="Jugando en streaming a varios juegos!",
                                                          url="https://www.twitch.tv/iamacat95"))
+
+
+# El bot comienza a trabajar

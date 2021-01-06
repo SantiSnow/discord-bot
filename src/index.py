@@ -66,7 +66,9 @@ async def ayuda(ctx):
                                       "/info para ver información sobre mi, el bot anfitrión y sobre el server \n"
                                       "/stats para ver información sobre mi, el bot anfitrión y sobre el server \n"
                                       "/youtube seguido de lo que quieras para buscarlo en youtube \n"
-                                      "/reglas para ver las reglas del server \n",
+                                      "/reglas para ver las reglas del server \n"
+                                      "/ping para jugar al ping pong conmigo \n"
+                                      "/chottomate para ver chotto mate",
                           color=discord.Color.green())
     await ctx.send(embed=embed)
 
@@ -77,6 +79,14 @@ async def youtube(ctx, *, search):
     html_result = request.urlopen('https://www.youtube.com/results?' + query_asked)
     search_results = re.findall('/watch\?v=(.{11})', html_result.read().decode())
     await ctx.send('https://www.youtube.com/watch?v=' + search_results[0])
+
+
+@bot.command()
+async def chottomate(ctx):
+    embed = discord.Embed(title=f"{ctx.guild.name}",
+                          description="Chotto Mate")
+    embed.set_thumbnail(url='https://memegenerator.net/img/instances/84812431/chotto-matte.jpg')
+    await ctx.send(embed=embed)
 
 
 # eventos
