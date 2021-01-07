@@ -115,6 +115,3 @@ async def on_ready():
                                                          url="https://www.twitch.tv/iamacat95"))
 
 
-# El bot comienza a trabajar
-
-bot.run('Nzk2NDM4NzczOTczOTA5NTA0.X_X7aA.eYyXH_xtmZtEKMEyjhJq2K8Wx3s')
