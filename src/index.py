@@ -49,7 +49,7 @@ async def reglas(ctx):
                                       "-Prohibido: Insultos raciales, por religión, género, orientación sexual"
                                       " o cualquier otro tipo de discriminación\n"
                                       "-¡Tratense con respeto por favor!\n"
-                                      "-Cualquier tópico de discusión esta permitido mientras no sea con respeto\n"
+                                      "-Cualquier tópico de discusión esta permitido mientras sea con respeto\n"
                                       "-Esta estrictamente prohibido el spam, sea del contenido que sea.\n"
                                       "-No puede publicitarse mas de una vez a la semana el contenido.\n"
                                       "-¡Recuerden que pueden hacer recomendaciones de lo que gusten!\n"
@@ -63,6 +63,22 @@ async def ayuda(ctx):
     embed = discord.Embed(title=f"{ctx.guild.name}",
                           description="Algunos de estos comandos pueden ayudarte:\n"
                                       "/ayuda para ver los comandos \n"
+                                      "/info para ver información sobre mi, el bot anfitrión y sobre el server \n"
+                                      "/stats para ver información sobre mi, el bot anfitrión y sobre el server \n"
+                                      "/youtube seguido de lo que quieras para buscarlo en youtube \n"
+                                      "/reglas para ver las reglas del server \n"
+                                      "/ping para jugar al ping pong conmigo \n"
+                                      "/chottomate para ver chotto mate",
+                          color=discord.Color.green())
+    await ctx.send(embed=embed)
+
+
+@bot.command()
+async def helpme(ctx):
+    embed = discord.Embed(title=f"{ctx.guild.name}",
+                          description="Algunos de estos comandos pueden ayudarte:\n"
+                                      "/ayuda para ver los comandos \n"
+                                      "/helpme para mas ayuda\n"
                                       "/info para ver información sobre mi, el bot anfitrión y sobre el server \n"
                                       "/stats para ver información sobre mi, el bot anfitrión y sobre el server \n"
                                       "/youtube seguido de lo que quieras para buscarlo en youtube \n"
